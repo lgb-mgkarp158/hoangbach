@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Hoàng Bách - Digital Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="physics-quantum-theme">
+    <!-- Main Portfolio Layout -->
+    <div class="app-layout">
+        
+        <!-- Sidebar Navigation Controls -->
+        <aside class="app-sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="profile-container">
+                    <div class="avatar-ring">
+                        <img src="assets/avatar.png" alt="Nguyễn Hoàng Bách" class="profile-avatar" id="avatar-img">
+                        <div class="avatar-particle-emitter" id="particle-emitter"></div>
+                    </div>
+                    <h1 class="profile-name">Nguyễn Hoàng Bách</h1>
+                    <div class="profile-meta">
+                        <span class="meta-badge">Đại học Công nghệ</span>
+                        <span class="meta-badge">UET - VNU</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="nav-control-deck">
+                <button class="nav-btn active" data-tab="home" id="btn-home">
+                    <svg class="icon-svg" viewBox="0 0 24 24">
+                        <path d="M19 9.3V4h-3v2.6L12 3 2 12h3v8h5v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    <span>Trang chủ</span>
+                </button>
+                <button class="nav-btn" data-tab="practices" id="btn-practices">
+                    <svg class="icon-svg" viewBox="0 0 24 24">
+                        <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+                    </svg>
+                    <span>Các bài thực hành</span>
+                </button>
+                <button class="nav-btn" data-tab="reflection" id="btn-reflection">
+                    <svg class="icon-svg" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    <span>Học tập & Phản tư</span>
+                </button>
+                <button class="nav-btn" data-tab="skills" id="btn-skills">
+                    <svg class="icon-svg" viewBox="0 0 24 24">
+                        <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.47 18.66l6.53 3.56 6.53-3.56v-4.52l-6.53 3.56-6.53-3.56v4.52z"/>
+                    </svg>
+                    <span>Bài học & Kỹ năng</span>
+                </button>
+                <button class="nav-btn" data-tab="conclusion" id="btn-conclusion">
+                    <svg class="icon-svg" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    <span>Tổng kết</span>
+                </button>
+            </nav>
+            
+            <div class="sidebar-bottom">
+                <div class="student-card-details">
+                    <div class="detail-item"><span class="lbl">MSV:</span><span class="val font-mono">25020885</span></div>
+                    <div class="detail-item"><span class="lbl">Ngành:</span><span class="val text-right">Vật lý Kỹ thuật</span></div>
+                </div>
+                <div class="system-status">
+                    <span class="status-pulse-dot"></span>
+                    <span>Học kỳ II · Năm học 2025-2026</span>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="app-main" id="main-content">
+            
+            <!-- SECTION 1: TRANG CHỦ -->
+            <section class="tab-view active" id="view-home">
+                <div class="dashboard-hero">
+                    <div class="hero-eyebrow">Digital Portfolio</div>
+                    <h2 class="hero-heading">Chào mừng đến với không gian số của tôi</h2>
+                    <p class="hero-desc">"Trong kỷ nguyên cách mạng số, sự giao thoa giữa Vật lý kỹ thuật thực nghiệm và Trí tuệ nhân tạo là chìa khóa để mô phỏng chính xác thế giới tự nhiên, tối ưu hóa các hệ thống cảm biến và kiến tạo giải pháp công nghệ cao thế hệ mới."</p>
+                </div>
+                
+                <!-- Quick Metrics Grid -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon-wrap m-blue">
+                            <svg class="m-icon" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                        </div>
+                        <div class="metric-info">
+                            <span class="metric-val">05</span>
+                            <span class="metric-lbl">Dự án thực hành chuyên sâu</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon-wrap m-orange">
+                            <svg class="m-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </div>
+                        <div class="metric-info">
+                            <span class="metric-val">06</span>
+                            <span class="metric-lbl">Nguyên tắc Đạo đức AI</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon-wrap m-teal">
+                            <svg class="m-icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        </div>
+                        <div class="metric-info">
+                            <span class="metric-val">100%</span>
+                            <span class="metric-lbl">Minh bạch & Liêm chính</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Detailed Introduction -->
+                <div class="intro-grid">
+                    <div class="intro-card main-intro">
+                        <h3 class="panel-section-title">Hồ sơ cá nhân</h3>
+                        <p class="intro-paragraph">
+                            Tôi là <strong>Nguyễn Hoàng Bách</strong>, hiện là sinh viên chuyên ngành <strong>Vật lý Kỹ thuật</strong> tại Trường Đại học Công nghệ (UET) - Đại học Quốc gia Hà Nội. Học phần Nhập môn Công nghệ số và Ứng dụng Trí tuệ Nhân tạo đã mang lại cho tôi cơ hội tuyệt vời để tiếp cận tư duy số hóa hệ thống, quản lý dữ liệu lớn khoa học và ứng dụng AI để tối ưu hóa quá trình học tập thực tiễn.
+                        </p>
+                        <p class="intro-paragraph">
+                            Trang Digital Portfolio này được thiết kế theo phong cách tối giản công nghệ (Prussian Blue & Atomic Copper) với các đường viền nét mỏng và tông màu xanh biển sâu của phòng thí nghiệm vật lý hiện đại phối hợp với sắc cam đồng năng lượng nguyên tử. Đây là nơi lưu giữ 5 bài thực hành độc lập, các phân tích phản tư sâu sắc và lộ trình làm chủ kỹ năng số của tôi.
+                        </p>
+                    </div>
+                    
+                    <div class="intro-card goal-card">
+                        <h3 class="panel-section-title">Mục tiêu nghiên cứu số</h3>
+                        <div class="target-bullet">
+                            <div class="target-icon">⚛️</div>
+                            <div class="target-details">
+                                <strong>Mô phỏng vật lý thông minh:</strong> Tích hợp các thuật toán học máy (Machine Learning) để mô phỏng tương tác vật liệu nano và dự báo hiện tượng nhiệt - quang học.
+                            </div>
+                        </div>
+                        <div class="target-bullet">
+                            <div class="target-icon">⚡</div>
+                            <div class="target-details">
+                                <strong>Xử lý dữ liệu thực nghiệm:</strong> Sử dụng hệ thống cơ sở dữ liệu phi quan hệ (NoSQL) để ghi chép lượng lớn chuỗi dữ liệu thô thu nhận từ cảm biến vật lý theo thời gian thực.
+                            </div>
+                        </div>
+                        <div class="target-bullet">
+                            <div class="target-icon">🛡️</div>
+                            <div class="target-details">
+                                <strong>Ứng dụng AI liêm chính:</strong> Thiết lập thói quen viết prompt có cấu trúc và luôn trích dẫn minh bạch nguồn gốc dữ liệu khi nghiên cứu học thuật.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SECTION 2: CÁC BÀI THỰC HÀNH -->
+            <section class="tab-view" id="view-practices">
+                <div class="dashboard-header-block">
+                    <h2 class="view-title">Các bài thực hành đã hoàn thành</h2>
+                    <p class="view-subtitle">Tổng hợp các dự án thực hành cá nhân được số hóa dưới dạng văn bản báo cáo khoa học PDF</p>
+                </div>
+                
+                <div class="practices-stack">
+                    
+                    <!-- Bài 2 -->
+                    <div class="report-card">
+                        <div class="report-header">
+                            <span class="level-badge badge-blue">Bài thực hành 2</span>
+                            <h3 class="report-title">So sánh hiệu năng và khả năng mở rộng giữa SQL và NoSQL</h3>
+                        </div>
+                        <div class="report-body">
+                            <div class="report-desc-grid">
+                                <div class="desc-box">
+                                    <h4 class="box-label">Quá trình thực hiện</h4>
+                                    <p class="box-content">Tiến hành nghiên cứu đối sánh hiệu năng giữa cơ sở dữ liệu quan hệ (SQL - đại diện bởi MySQL) và cơ sở dữ liệu phi quan hệ (NoSQL - đại diện bởi MongoDB). Tra cứu và phân tích 4 nguồn tài liệu học thuật uy tín (Salahuddin et al. 2024, Deari et al. 2018, Harrison 2018 và AWS 2024) dựa trên bộ tiêu chí đánh giá nguồn tin học thuật A-P-M-C-U.</p>
+                                </div>
+                                <div class="desc-box">
+                                    <h4 class="box-label">Sau khi thực hiện</h4>
+                                    <p class="box-content">Lập bảng phân tích sâu sắc ưu, nhược điểm và độ tin cậy của 11 tài liệu tham khảo theo chuẩn Harvard. Làm rõ đặc tính của định lý CAP, tính toàn vẹn dữ liệu ACID của SQL và kiến trúc lược đồ động linh hoạt của NoSQL.</p>
+                                </div>
+                            </div>
+                            <div class="card-reflection">
+                                <strong>Bài học rút ra:</strong> Hiểu rõ bản chất lưu trữ giúp lựa chọn cơ sở dữ liệu tối ưu cho các hệ thống thu thập thông tin khoa học: dùng SQL cho thông tin đăng ký định danh thiết bị đo lường và MongoDB để ghi nhận chuỗi dữ liệu thô truyền về liên tục từ cảm biến.
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <a href="docs/w2.pdf" target="_blank" class="btn-action btn-blue">
+                                <svg class="btn-icon-svg" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                                Mở xem file w2.pdf
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Bài 3 -->
+                    <div class="report-card">
+                        <div class="report-header">
+                            <span class="level-badge badge-blue">Bài thực hành 3</span>
+                            <h3 class="report-title">Kỹ năng thiết kế Prompt Engineering hiệu quả trong tự học</h3>
+                        </div>
+                        <div class="report-body">
+                            <div class="report-desc-grid">
+                                <div class="desc-box">
+                                    <h4 class="box-label">Quá trình thực hiện</h4>
+                                    <p class="box-content">Thiết kế và thử nghiệm 3 cấp độ prompt (Cơ bản, Cải tiến, Nâng cao) trên 3 tác vụ học thuật thực tế: (1) Tóm tắt bài đọc về Biến đổi khí hậu, (2) Giải thích khái niệm Blockchain bằng phép loại suy dễ hiểu, và (3) Thiết lập bộ câu hỏi ôn tập lịch sử Thế chiến II phân hóa theo Bloom dưới dạng bảng.</p>
+                                </div>
+                                <div class="desc-box">
+                                    <h4 class="box-label">Sau khi thực hiện</h4>
+                                    <p class="box-content">Đánh giá kết quả phản hồi của AI (Gemini), chứng minh sự vượt trội của prompt nâng cao có gán vai trò (Role-prompting), định dạng đầu ra chi tiết (Explicit Formatting) và dẫn dắt tư duy (Chain-of-Thought) trong việc giảm thiểu ảo giác thông tin.</p>
+                                </div>
+                            </div>
+                            <div class="card-reflection">
+                                <strong>Bài học rút ra:</strong> Tương tác với LLMs hiệu quả đòi hỏi tư duy logic hệ thống cao. Bằng cách áp dụng quy tắc cấu trúc câu lệnh C.R.E.A.T.E, ta có thể khai thác AI như một đối tác phản biện học thuật thông minh.
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <a href="docs/w3.pdf" target="_blank" class="btn-action btn-blue">
+                                <svg class="btn-icon-svg" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                                Mở xem file w3.pdf
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Bài 4 -->
+                    <div class="report-card">
+                        <div class="report-header">
+                            <span class="level-badge badge-blue">Bài thực hành 4</span>
+                            <h3 class="report-title">Ứng dụng công cụ trực tuyến trong làm việc nhóm</h3>
+                        </div>
+                        <div class="report-body">
+                            <div class="report-desc-grid">
+                                <div class="desc-box">
+                                    <h4 class="box-label">Quá trình thực hiện</h4>
+                                    <p class="box-content">Thực hành cộng tác dự án nhóm dựa trên việc tích hợp 3 nhóm công cụ: Trello (quản trị tiến độ công việc theo mô hình Kanban), Google Docs (đồng soạn thảo kịch bản trực tiếp) và Google Drive (tổ chức lưu trữ tài liệu khoa học 3 cấp phân quyền cụ thể).</p>
+                                </div>
+                                <div class="desc-box">
+                                    <h4 class="box-label">Sau khi thực hiện</h4>
+                                    <p class="box-content">Đưa ra giải pháp kỹ thuật giải quyết 3 thách thức lớn của nhóm: Ghi đè hoặc xóa nhầm văn bản bằng chế độ đề xuất (Suggesting), trôi thông tin thảo luận chung, và duy trì kỷ luật cập nhật tiến độ Trello cá nhân trước khi kết thúc ngày làm việc.</p>
+                                </div>
+                            </div>
+                            <div class="card-reflection">
+                                <strong>Bài học rút ra:</strong> Cộng tác số hiệu quả không chỉ đơn thuần là sử dụng phần mềm, mà là việc xây dựng một quy trình làm việc ngăn nắp, khoa học, minh bạch và thống nhất chuẩn đặt tên tệp tin của nhóm.
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <a href="docs/w4.pdf" target="_blank" class="btn-action btn-blue">
+                                <svg class="btn-icon-svg" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                                Mở xem file w4.pdf
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Bài 5 -->
+                    <div class="report-card">
+                        <div class="report-header">
+                            <span class="level-badge badge-blue">Bài thực hành 5</span>
+                            <h3 class="report-title">Sử dụng trí tuệ nhân tạo tạo sinh trong sáng tạo nội dung số</h3>
+                        </div>
+                        <div class="report-body">
+                            <div class="report-desc-grid">
+                                <div class="desc-box">
+                                    <h4 class="box-label">Quá trình thực hiện</h4>
+                                    <p class="box-content">Thiết kế sản phẩm đồ họa trực quan Infographic "3 cách làm giảm căng thẳng mùa thi" (Pomodoro, Ngủ đủ giấc, Hít thở sâu & Nghe nhạc). Kết hợp đồng thời Google Gemini (soạn thảo nội dung Gen Z), Nano Banana 2 (tạo bộ icon 3D gối, tai nghe, giày thể thao độc quyền), và Canva AI.</p>
+                                </div>
+                                <div class="desc-box">
+                                    <h4 class="box-label">Sau khi thực hiện</h4>
+                                    <p class="box-content">Biên tập sâu sắc sản phẩm thô: cắt bỏ 30% văn bản thừa từ AI, tự tay tách nền các icon 3D và ghép vào bố cục lưới ngăn nắp tự vẽ trên Canva. Tự chọn cặp phông chữ Mali (mềm mại) và Roboto (rõ ràng) để tối ưu tính thẩm mỹ và định hướng mắt người đọc.</p>
+                                </div>
+                            </div>
+                            <div class="card-reflection">
+                                <strong>Bài học rút ra:</strong> Tỷ lệ phối hợp 50% AI cung cấp nguyên liệu nhô thô và 50% Con người đóng vai trò "Giám đốc nghệ thuật" để hiệu chỉnh thẩm mỹ là ranh giới cần thiết giúp sản phẩm số có linh hồn và thông điệp rõ ràng.
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <a href="docs/w5.pdf" target="_blank" class="btn-action btn-blue">
+                                <svg class="btn-icon-svg" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                                Mở xem file w5.pdf
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Bài 6 -->
+                    <div class="report-card">
+                        <div class="report-header">
+                            <span class="level-badge badge-blue">Bài thực hành 6</span>
+                            <h3 class="report-title">Sử dụng AI có đạo đức và trách nhiệm trong học tập</h3>
+                        </div>
+                        <div class="report-body">
+                            <div class="report-desc-grid">
+                                <div class="desc-box">
+                                    <h4 class="box-label">Quá trình thực hiện</h4>
+                                    <p class="box-content">Khảo sát chính sách học thuật về AI của ĐHQGHN so sánh với RMIT. Triển khai lập dàn ý bài tiểu luận "Tác động của xâm nhập mặn đến nông nghiệp ĐBSCL" bằng ChatGPT, tiến hành đối chéo số liệu thô và thay các con số ảo giác bằng báo cáo thực tế của Bộ Nông nghiệp.</p>
+                                </div>
+                                <div class="desc-box">
+                                    <h4 class="box-label">Sau khi thực hiện</h4>
+                                    <p class="box-content">Xây dựng bản tuyên bố sử dụng AI minh bạch (AI Disclosure) chi tiết ở cuối bài viết và thiết lập bộ 6 nguyên tắc đạo đức cá nhân sử dụng AI (Làm chủ, Minh bạch, Không copy mù quáng, Kiểm chứng chéo, An toàn dữ liệu, Bảo tồn kỹ năng tự nghiên cứu).</p>
+                                </div>
+                            </div>
+                            <div class="card-reflection">
+                                <strong>Bài học rút ra:</strong> Đạo đức số bắt đầu từ tính trung thực. AI chỉ được phép đóng vai trò hỗ trợ kết cấu hoặc gợi mở tư duy (Co-pilot), con người bắt buộc phải làm chủ và trực tiếp thực thi lập luận để tránh rủi ro "teo cơ nhận thức".
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <a href="docs/w6.pdf" target="_blank" class="btn-action btn-blue">
+                                <svg class="btn-icon-svg" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                                Mở xem file w6.pdf
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <!-- SECTION 3: HỌC TẬP & PHẢN TƯ -->
+            <section class="tab-view" id="view-reflection">
+                <div class="dashboard-header-block">
+                    <h2 class="view-title">Học tập & Phản tư chuyên sâu</h2>
+                    <p class="view-subtitle">Giao thoa công nghệ số, trí tuệ nhân tạo và tính liêm chính trong Khoa học Vật lý Kỹ thuật</p>
+                </div>
+                
+                <div class="reflection-scroll-area">
+                    
+                    <!-- Box 1: AI & Technical Physics -->
+                    <div class="glass-reflection-card">
+                        <div class="glass-icon">⚛️</div>
+                        <div class="glass-content">
+                            <h3 class="glass-card-title">Mối liên kết giữa Vật lý Kỹ thuật & Công nghệ số</h3>
+                            <p>
+                                Ngành <strong>Vật lý Kỹ thuật</strong> hiện đại không chỉ giới hạn trong các thực nghiệm vật lý truyền thống, mà gắn liền với việc thu thập và phân tích lượng dữ liệu khổng lồ thu được từ các thiết bị đo lường cảm biến, quang học, vi mạch bán dẫn. 
+                            </p>
+                            <p>
+                                Việc ứng dụng công nghệ số và AI giúp tăng tốc độ mô phỏng số cấu trúc tinh thể vật liệu mới, tối ưu hóa các thông số laser, và xử lý nhiễu dữ liệu thực nghiệm một cách tự động. Qua học phần, tôi nhận thức rõ: làm chủ công cụ số chính là chìa khóa để nâng cao hiệu năng nghiên cứu vật lý ứng dụng.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Box 2: Institutional AI Policy Comparison -->
+                    <div class="glass-reflection-card">
+                        <div class="glass-icon">⚖️</div>
+                        <div class="glass-content">
+                            <h3 class="glass-card-title">So sánh chính sách học đường về việc sử dụng AI tạo sinh</h3>
+                            <p>
+                                Phân tích so sánh chính sách của hai môi trường giáo dục lớn cho thấy các triết lý tiếp cận khác nhau đối với công nghệ mới:
+                            </p>
+                            
+                            <div class="policy-comparison-cards">
+                                <div class="policy-box uet-box">
+                                    <div class="policy-box-title">Đại học Quốc gia Hà Nội (ĐHQGHN)</div>
+                                    <p class="policy-box-txt font-sm">Tiếp cận theo hướng bảo vệ tính trung thực và liêm chính học thuật truyền thống. Nghiêm cấm hành vi nộp nguyên văn đầu ra của AI làm bài kiểm tra hoặc nghiên cứu độc lập. AI được coi là một công cụ hỗ trợ gợi ý cấu trúc hoặc tìm lỗi, sản phẩm nộp về phải phản ánh tư duy độc lập của người học.</p>
+                                </div>
+                                <div class="policy-box rmit-box">
+                                    <div class="policy-box-title">Đại học RMIT Việt Nam</div>
+                                    <p class="policy-box-txt font-sm">Tiếp cận linh hoạt theo hướng phân chia cấp độ. Tùy thuộc vào từng bài đánh giá, giảng viên quy định mức độ sinh viên được sử dụng AI từ cấm hoàn toàn đến cho phép sử dụng có điều kiện. Đi kèm yêu cầu bắt buộc phải đính kèm Bản khai báo sử dụng AI (AI Disclosure) chi tiết.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Box 3: Ethical Boundaries and AI-giarism -->
+                    <div class="glass-reflection-card">
+                        <div class="glass-icon">🛡️</div>
+                        <div class="glass-content">
+                            <h3 class="glass-card-title">Ranh giới sử dụng AI & Nguy cơ "Teo cơ nhận thức"</h3>
+                            <p>
+                                Việc ỷ lại hoàn toàn vào các mô hình ngôn ngữ lớn (LLM) để viết báo cáo hay giải bài tập vật lý dẫn đến hiện tượng <strong>Teo cơ nhận thức (Cognitive Atrophy)</strong>, làm suy giảm năng lực tư duy phản biện và khả năng lập luận toán học tự thân của sinh viên kỹ thuật. Ranh giới đạo đức sử dụng AI cần được tuân thủ chặt chẽ:
+                            </p>
+                            
+                            <div class="allowed-vs-forbidden">
+                                <div class="behavior-box check">
+                                    <div class="behavior-badge allowed">HỖ TRỢ HỢP LÝ</div>
+                                    <ul>
+                                        <li>Brainstorming ý tưởng thiết kế mô phỏng vật lý ban đầu.</li>
+                                        <li>Tìm lỗi cú pháp hoặc gợi ý tối ưu hóa code Python xử lý dữ liệu đo lường.</li>
+                                        <li>Sửa lỗi ngữ pháp và diễn đạt văn phong học thuật trong các đoạn văn tự viết.</li>
+                                    </ul>
+                                </div>
+                                <div class="behavior-box cross">
+                                    <div class="behavior-badge forbidden">GIAN LẬN HỌC THUẬT</div>
+                                    <ul>
+                                        <li>Copy-paste 100% kết quả viết của AI vào tiểu luận khoa học.</li>
+                                        <li>Sử dụng số liệu không kiểm chứng do AI tự bịa ra để làm báo cáo thực nghiệm.</li>
+                                        <li>Tải tài sản trí tuệ, đề kiểm tra bảo mật của nhà trường lên các AI công cộng.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <!-- SECTION 4: BÀI HỌC & KỸ NĂNG -->
+            <section class="tab-view" id="view-skills">
+                <div class="dashboard-header-block">
+                    <h2 class="view-title">Bài học & Hệ thống Kỹ năng số</h2>
+                    <p class="view-subtitle">Chi tiết về kiến thức và các kỹ năng cốt lõi tôi đã làm chủ trong suốt học phần</p>
+                </div>
+                
+                <!-- Prompt engineering section -->
+                <div class="skills-block-detail">
+                    <h3 class="skills-block-title">1. Kỹ năng Prompt Engineering - Bộ nguyên tắc C.R.E.A.T.E</h3>
+                    <p class="skills-block-intro">Tương tác hiệu quả với LLMs dựa trên việc cấu trúc câu lệnh chặt chẽ để thu hẹp không gian giải pháp của AI. Bộ nguyên tắc C.R.E.A.T.E do tôi áp dụng:</p>
+                    
+                    <div class="create-structure">
+                        <div class="create-node">
+                            <div class="node-letter">C</div>
+                            <div class="node-content">
+                                <strong>Context & Constraints (Bối cảnh & Giới hạn)</strong>
+                                <span>Gán đối tượng độc giả mục tiêu và giới hạn rõ ràng những gì AI không được làm.</span>
+                            </div>
+                        </div>
+                        <div class="create-node">
+                            <div class="node-letter">R</div>
+                            <div class="node-content">
+                                <strong>Role-playing (Đóng vai)</strong>
+                                <span>Kích hoạt vùng tri thức của AI bằng vai trò cụ thể (Ví dụ: "Bạn là chuyên gia vật lý quang học").</span>
+                            </div>
+                        </div>
+                        <div class="create-node">
+                            <div class="node-letter">E</div>
+                            <div class="node-content">
+                                <strong>Explicit Formatting (Định dạng Rõ ràng)</strong>
+                                <span>Định dạng đầu ra rõ nét: bảng biểu, gạch đầu dòng, hay giới hạn số lượng chữ.</span>
+                            </div>
+                        </div>
+                        <div class="create-node">
+                            <div class="node-letter">A</div>
+                            <div class="node-content">
+                                <strong>Analogy & Examples (Loại suy & Ví dụ)</strong>
+                                <span>Cung cấp ví dụ mẫu (Few-shot) để AI định hình phong thái và kết quả mong muốn.</span>
+                            </div>
+                        </div>
+                        <div class="create-node">
+                            <div class="node-letter">T</div>
+                            <div class="node-content">
+                                <strong>Thought Process (Dẫn dắt tư duy)</strong>
+                                <span>Yêu cầu AI lập luận từng bước một (Chain-of-thought) để tăng độ chính xác thuật toán.</span>
+                            </div>
+                        </div>
+                        <div class="create-node">
+                            <div class="node-letter">E</div>
+                            <div class="node-content">
+                                <strong>Evaluate & Iterate (Đánh giá & Tinh chỉnh)</strong>
+                                <span>Thực hiện hội thoại liên tục để gọt giũa và nâng cấp chất lượng câu trả lời.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Table: Prompt Engineering Comparison -->
+                    <h4 class="skills-table-title font-mono">Bảng đối sánh hiệu quả các cấp độ Prompt trên các tác vụ học tập</h4>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tác vụ học tập</th>
+                                    <th>Cấp độ Prompt</th>
+                                    <th>Nội dung Prompt mẫu</th>
+                                    <th>Đánh giá hiệu quả thực tế từ Gemini</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3" class="task-cell">Tác vụ 1:<br>Tóm tắt học thuật<br>(Biến đổi khí hậu)</td>
+                                    <td>Cơ bản</td>
+                                    <td><code class="code-block">Tóm tắt bài viết sau về Biến đổi khí hậu: [link/nội dung]</code></td>
+                                    <td class="eval-cell">Trả về khối văn bản dài dòng, thiếu phân lớp ý chính, khó đọc nhanh.</td>
+                                </tr>
+                                <tr>
+                                    <td>Cải tiến</td>
+                                    <td><code class="code-block">Hãy tóm tắt bài viết về Biến đổi khí hậu sau đây thành 3 đoạn văn: nguyên nhân, hệ quả, và giải pháp.</code></td>
+                                    <td class="eval-cell">Cấu trúc dễ nhìn hơn nhưng các số liệu cốt lõi vẫn bị trộn lẫn trong đoạn văn.</td>
+                                </tr>
+                                <tr>
+                                    <td class="adv-text">Nâng cao</td>
+                                    <td><code class="code-block">Đóng vai nhà nghiên cứu môi trường lão luyện. Hãy tóm tắt bài báo học thuật dưới đây cho sinh viên năm nhất: 1. Luận điểm chính (3 ý); 2. Số liệu nổi bật (2 số liệu); 3. Tóm tắt 150 từ.</code></td>
+                                    <td class="eval-cell text-blue">Vượt trội: Thông tin được cấu trúc rõ rệt thành dạng liệt kê, trích xuất chính xác số liệu và tiết kiệm 80% thời gian nghiên cứu.</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td rowspan="3" class="task-cell">Tác vụ 2:<br>Giải thích khái niệm<br>(Công nghệ Blockchain)</td>
+                                    <td>Cơ bản</td>
+                                    <td><code class="code-block">Blockchain là gì? Giải thích cho tôi.</code></td>
+                                    <td class="eval-cell">Giải thích thuần lý thuyết giống như Wikipedia, lạm dụng nhiều biệt ngữ công nghệ khó hiểu.</td>
+                                </tr>
+                                <tr>
+                                    <td>Cải tiến</td>
+                                    <td><code class="code-block">Hãy giải thích công nghệ Blockchain là gì cho một người không học ngành CNTT, có đưa ra ví dụ thực tế.</code></td>
+                                    <td class="eval-cell">Dễ hiểu hơn nhờ ví dụ, nhưng logic liên kết giữa định nghĩa và ví dụ còn rời rạc.</td>
+                                </tr>
+                                <tr>
+                                    <td class="adv-text">Nâng cao</td>
+                                    <td><code class="code-block">Hãy đóng vai một giáo viên công nghệ truyền cảm hứng và giỏi phép loại suy. Hãy giải thích Blockchain cho học sinh cấp 2. Suy nghĩ từng bước: Bước 1 ví dụ sổ nợ tạp hóa; Bước 2 liên kết khối-chuỗi; Bước 3 nêu 2 ưu điểm. Không dùng thuật ngữ code.</code></td>
+                                    <td class="eval-cell text-blue">Đỉnh cao: Phép loại suy cực kỳ trực quan. Kỹ thuật Chain-of-thought giúp AI dẫn dắt vấn đề rất mượt mà, dễ nhớ lâu.</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td rowspan="3" class="task-cell">Tác vụ 3:<br>Tạo bộ câu hỏi ôn tập<br>(Thế chiến thứ II)</td>
+                                    <td>Cơ bản</td>
+                                    <td><code class="code-block">Tạo cho tôi một vài câu hỏi để ôn tập về Thế chiến thứ 2.</code></td>
+                                    <td class="eval-cell">Câu hỏi quá đơn giản, không mang tính phân hóa để kiểm tra chiều sâu kiến thức.</td>
+                                </tr>
+                                <tr>
+                                    <td>Cải tiến</td>
+                                    <td><code class="code-block">Tạo cho tôi 5 câu hỏi trắc nghiệm (có 4 đáp án A, B, C, D) về Thế chiến thứ 2, cuối bài cung cấp đáp án đúng.</code></td>
+                                    <td class="eval-cell">Độ phủ kiến thức ở mức khá, đáp án đúng tiện lợi cho việc tự chấm điểm nhanh.</td>
+                                </tr>
+                                <tr>
+                                    <td class="adv-text">Nâng cao</td>
+                                    <td><code class="code-block">Đóng vai chuyên gia khảo thí lịch sử. Tạo bộ ôn tập gồm 5 câu theo Bloom (2 Nhận biết, 2 Thông hiểu, 1 Vận dụng). Xuất ra một BẢNG có các cột: STT, Mức độ, Câu hỏi, 4 Phương án, Đáp án đúng, Giải thích chi tiết vì sao đúng.</code></td>
+                                    <td class="eval-cell text-blue">Vượt trội: Định dạng bảng trực quan, phương án gây nhiễu tốt, phần giải thích giúp hiểu sâu sắc bản chất sự kiện.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Academic search section -->
+                <div class="skills-block-detail">
+                    <h3 class="skills-block-title">2. Kỹ năng Nghiên cứu tài liệu học thuật theo tiêu chí A-P-M-C-U</h3>
+                    <p class="skills-block-intro">Đánh giá độ tin cậy của các nguồn tài liệu tham khảo phục vụ đề tài: <strong>"Tác động của Trí tuệ nhân tạo tạo sinh đối với tính liêm chính học thuật trong giáo dục đại học"</strong>.</p>
+                    
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tài liệu tham khảo (Harvard style)</th>
+                                    <th>Tác giả (A)</th>
+                                    <th>NXB/Tạp chí (P)</th>
+                                    <th>Phương pháp (M)</th>
+                                    <th>Trích dẫn (C)</th>
+                                    <th>Cập nhật (U)</th>
+                                    <th>Độ tin cậy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Ensuring academic integrity in the era of ChatGPT (Cotton et al., 2023)</td>
+                                    <td>Cao</td>
+                                    <td>Rất cao (Innovations in Education)</td>
+                                    <td>NC Định tính & Phân tích văn bản</td>
+                                    <td>Rất cao (>300)</td>
+                                    <td>Rất cao (2023)</td>
+                                    <td><span class="p-badge p-blue">Rất cao (5/5)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>ChatGPT in higher education: Considerations... (Sullivan et al., 2023)</td>
+                                    <td>Cao</td>
+                                    <td>Cao (Journal of Applied Learning)</td>
+                                    <td>Đánh giá tổng quan (Literature Review)</td>
+                                    <td>Cao (>150)</td>
+                                    <td>Rất cao (2023)</td>
+                                    <td><span class="p-badge p-blue">Cao (4.5/5)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Academic Integrity in the post-pandemic era... (Perkins, 2023)</td>
+                                    <td>Cao</td>
+                                    <td>Cao (Journal of University Teaching)</td>
+                                    <td>Phân tích trường hợp (Case Study)</td>
+                                    <td>Cao (>250)</td>
+                                    <td>Rất cao (2023)</td>
+                                    <td><span class="p-badge p-blue">Cao (4.5/5)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Generative AI tools and teaching and learning... (Moorhouse et al., 2023)</td>
+                                    <td>Cao</td>
+                                    <td>Rất cao (ETR&D)</td>
+                                    <td>Khung lý thuyết</td>
+                                    <td>Trung bình</td>
+                                    <td>Rất cao (2023)</td>
+                                    <td><span class="p-badge p-blue">Rất cao (5/5)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Emerging challenges in AI and ethics... (Borenstein & Howard, 2021)</td>
+                                    <td>Cao</td>
+                                    <td>Rất cao (Springer)</td>
+                                    <td>Phân tích đạo đức</td>
+                                    <td>Khá</td>
+                                    <td>Khá cao (2021)</td>
+                                    <td><span class="p-badge p-orange">Cao (4/5)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>ChatGPT: The end of online exam integrity? (Susnjak, 2022)</td>
+                                    <td>Cao</td>
+                                    <td>Trung bình (arXiv Preprint)</td>
+                                    <td>Thực nghiệm thực tế</td>
+                                    <td>Khá cao</td>
+                                    <td>Rất cao (2022)</td>
+                                    <td><span class="p-badge p-grey">Khá (3.5/5)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SECTION 5: TỔNG KẾT -->
+            <section class="tab-view" id="view-conclusion">
+                <div class="dashboard-hero">
+                    <div class="hero-eyebrow">Kết luận hành trình</div>
+                    <h2 class="hero-heading">Phát triển năng lực số và định hướng tương lai</h2>
+                    <p class="hero-desc">"Vật lý mô tả các quy luật vận hành của tự nhiên, còn Công nghệ số là phương tiện giúp ta hiện thực hóa các quy luật đó một cách nhanh chóng và chính xác nhất."</p>
+                </div>
+                
+                <div class="conclusion-grid">
+                    <div class="conclusion-box">
+                        <h4>🌱 Giá trị tích lũy</h4>
+                        <p>Học phần đã giúp tôi có bước chuyển dịch sâu sắc về tư duy số: từ việc quản trị tệp tin khoa học đến kỹ năng tương tác prompt hệ thống. Tôi đã vượt qua e ngại ban đầu về việc phân tích dữ liệu lớn và hiểu rõ ranh giới đạo đức liêm chính khi sử dụng AI hỗ trợ học tập.</p>
+                    </div>
+                    <div class="conclusion-box">
+                        <h4>🎯 Định hướng ứng dụng</h4>
+                        <p>Trong tương lai, tôi hướng tới việc áp dụng các mô hình học máy và cơ sở dữ liệu lược đồ động để thu thập dữ liệu quang điện hoặc mô phỏng chuyển pha vật liệu nano, kết hợp chặt chẽ tư duy vật lý thực chứng cùng hiệu năng xử lý của trí tuệ nhân tạo.</p>
+                    </div>
+                </div>
+                
+                <div class="thank-you-card">
+                    <h3>Lời cảm ơn chân thành</h3>
+                    <p>Em xin bày tỏ lòng biết ơn sâu sắc tới quý thầy cô đã tận tình giảng dạy và định hướng tư duy số cho em trong suốt học kỳ vừa qua. Sự dẫn dắt nhiệt huyết của thầy cô là động lực lớn để em tiếp tục khám phá và tích hợp công nghệ cao vào chuyên ngành Vật lý Kỹ thuật!</p>
+                    <div class="signature">Nguyễn Hoàng Bách</div>
+                </div>
+            </section>
+            
+        </main>
+        
+    </div>
+
+    <!-- Toggle button for mobile layouts -->
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle Sidebar">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
